@@ -1,16 +1,15 @@
 import {useState} from "react";
+import {navLinks} from "../constants/index.js";
 
 const NavItems = () =>{
     return(
-        <ul className="nav-ul">
+        <ul className="nav-ul text-white">
             {
-                ["Home", "About", "Projects", "Contact"].map((item, index)=>{
-                    return(
-                        <li key={index} className="nav-li">
-                            <a className="nav-li_a" href="/">{item}</a>
-                        </li>
-                    )
-                })
+                navLinks.map(({name, id, href}) => (
+                    <li key={id} className="nav-li">
+                        <a className="nav-li_a" href={href} onClick={()=>{}}>{name}</a>
+                    </li>
+                ))
             }
         </ul>
     )
@@ -25,7 +24,7 @@ const Navbar = () => {
                 <div className="flex justify-between items-center py-5 mx-auto c-space">
                     <a href="/" className="text-neutral-400 font-bold text-xl hover:text-white transition-colors">Ruhan</a>
                     <button onClick={toggleMenu} className="text-neutral-400 hover:text-white transition-colors focus:outline-none sm:hidden flex" aria-label="Toggle Menu">
-                        <img src={isOpen ? "../../public/assets/close.svg":"../../public/assets/menu.svg"} alt="toggle" className="w-6 h-6" />
+                        <img src={isOpen ? "/assets/close.svg":"/assets/menu.svg"} alt="toggle" className="w-6 h-6" />
                     </button>
                     <nav className="sm:flex hidden">
                         <NavItems/>
