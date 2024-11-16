@@ -56,10 +56,10 @@ const Hero = () => {
     //         }
     //     }
     // );
-
+    // border-2 border-blue-500
     return (
-        <section className="min-h-screen border-2 border-blue-500 w-full flex flex-col relative">
-            <div className="w-full mx-auto flex flex-col sm:mt-28 mt-15 c-space gap-3">
+        <section className="min-h-screen  w-full flex flex-col relative">
+            <div className="w-full mx-auto flex flex-col sm:mt-28 mt-16 c-space gap-3">
                 <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">Assalamualaikum, I'm Ruhan <span className="waving-hand">Hi</span> </p>
                 <p className="hero_tag text-gray_gradient">Building Products & Brands</p>
 
@@ -90,8 +90,8 @@ const Hero = () => {
                         </Suspense>
                     </Canvas>
             </div>
-            <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
-                <a href="#contact" className="w-fit">
+            <div className="absolute bottom-7  left-0 right-0 flex justify-center z-10 c-space">
+                <a href="#contact" className="w-fit ">
                    <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
                 </a>
             </div>
