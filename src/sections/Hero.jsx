@@ -12,6 +12,7 @@ import Cube from "../components/Cube.jsx";
 import Rings from "../components/Rings.jsx";
 import HeroCamera from "../components/HeroCamera.jsx";
 import Button from "../components/Button.jsx";
+import HelloDesk from "../components/HelloDesk.jsx";
 const Hero = () => {
     const isSmall = useMediaQuery({maxWidth:440})
     const isMobile = useMediaQuery({minWidth:440,maxWidth: 768})
@@ -78,6 +79,11 @@ const Hero = () => {
                                     rotation={[0, -Math.PI, 0]}
                                     scale={sizes.deskScale}
                                 />
+                                {/*<HelloDesk*/}
+                                {/*    position={sizes.deskPosition}*/}
+                                {/*    rotation={[0, -Math.PI, 0]}*/}
+                                {/*    scale={sizes.deskScale}*/}
+                                {/*/>*/}
                             </HeroCamera>
                             <group>
                                 <Target position={sizes.targetPosition} />
